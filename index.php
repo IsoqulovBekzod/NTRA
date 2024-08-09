@@ -6,4 +6,9 @@ require_once "bootstrap.php";
 use App\User;
 
 $user=new User();
-$user->create('Bekzod','director','male','970300956');
+$name = $_POST['name'];
+$position = $_POST['position'];
+$gender = $_POST['gender'];
+$phone = $_POST['phone'];
+
+$user->create($name,$position,$gender,$phone);

@@ -31,9 +31,9 @@ class ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa
         array (
             'Dotenv\\' => 7,
         ),
-        'A' => 
+        'B' => 
         array (
-            'App\\' => 4,
+            'Bekzod\\Ntra\\' => 12,
         ),
     );
 
@@ -62,7 +62,7 @@ class ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
         ),
-        'App\\' => 
+        'Bekzod\\Ntra\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

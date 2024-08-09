@@ -1,18 +1,17 @@
 <?php
-
 namespace App;
 
-class User {
-    private PDO $pdo;
+use PDO; // PDO klassini ishlatish
 
-    public function __construct()
-    {
+class User {
+
+    public function __construct() {
         $this->pdo = DB::connect();
     }
 
     public function create(string $username, string $position, string $gender, string $phone) :bool
     {
-        $query = "INSERT INTO users(username, position, gender, phone) VALUES(:username, :position, :gender, :phone)";
+        $query = "INSERT INTO Users (username, position, gender, phone) VALUES(:username, :position, :gender, :phone)";
         $stmt = $this->pdo->prepare($query);
 
         $stmt->bindParam(':username', $username);
@@ -25,7 +24,7 @@ class User {
 
     public function getUser(int $id)
     {
-        $query = "SELECT * FROM users WHERE id = :id";
+        $query = "SELECT * FROM Users WHERE id = :id";
         $stmt = $this->pdo->prepare($query);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
@@ -35,7 +34,7 @@ class User {
 
     public function updateUser(int $id, string $username, string $position, string $gender, string $phone) :void
     {
-        $query = "UPDATE users SET username = :username, position = :position, gender = :gender, phone = :phone WHERE id = :id";
+        $query = "UPDATE Users SET username = :username, position = :position, gender = :gender, phone = :phone WHERE id = :id";
         $stmt = $this->pdo->prepare($query);
 
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
@@ -49,7 +48,7 @@ class User {
 
     public function deleteUser(int $id):void
     {
-        $query = "DELETE FROM users WHERE id = :id";
+        $query = "DELETE FROM Users WHERE id = :id";
         $stmt = $this->pdo->prepare($query);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 

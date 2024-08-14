@@ -1,0 +1,20 @@
+{
+  "name": "ntra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx tailwindcss -i public/styles/core.css -o public/styles/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsoqulovBekzod/NTRA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsoqulovBekzod/NTRA/issues"
+  },
+  "homepage": "https://github.com/IsoqulovBekzod/NTRA#readme"
+}
